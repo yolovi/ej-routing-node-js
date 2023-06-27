@@ -9,7 +9,7 @@ const fs = require("fs");
 http.createServer((req, res) => {
 const q = url.parse(req.url, true);
 const filename = "." + q.pathname;
-fs.readFile(filename, (error, data) => {
+fs.readFile(filename, (err, data) => {
 try {
 res.writeHead(200, { "Content-Type": "text/html" });
 res.write(data);
